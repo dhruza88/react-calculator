@@ -1,9 +1,10 @@
 
-import Wrapper from "./components/Wrapper";
-import Screen from "./components/Screen";
-import ButtonBox from './components/ButtonBox'
-import Button from './components/Button'
+import Wrapper from "./calc-components/Wrapper";
+import Screen from "./calc-components/Screen";
+import ButtonBox from './calc-components/ButtonBox'
+import Button from './calc-components/Button'
 import CalcProvider from "./context/CalcContext";
+import './App.css'
 
 
 const btnValues = [
@@ -16,6 +17,7 @@ const btnValues = [
 
 function App() {
   return (
+    <div className="CalcBody">
     <CalcProvider>
       <Wrapper>
         <Screen />
@@ -29,6 +31,7 @@ function App() {
         </ButtonBox>
       </Wrapper>
     </CalcProvider>
+    </div>
   );
 }
 
